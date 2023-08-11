@@ -1,8 +1,8 @@
 let connection;
 
 const handleUserInput = function (key) {
-  if (key === "\u0003") {
-    process.exit();
+  if (key === "\u0003") { //Terminate client conn. using ctrl+c
+    process.exit(); 
   }
 
   if (key === "w") {
@@ -18,7 +18,7 @@ const handleUserInput = function (key) {
     connection.write("Move: right");
   }
 
-  //messages
+  //Pre written messages to send with corresponding keys
   if (key === "p") {
     connection.write("Say: hello");
   }
@@ -45,10 +45,3 @@ const setupInput = function (conn) {
 module.exports = {
   setupInput,
 };
-
-// conn.on("connect", () => {
-//   // code that does something //Move
-//   setTimeout(() => {conn.write("Move: left")}, 1000);
-//   setInterval(() => {conn.write("Move: up")}, 2000);
-
-// });
