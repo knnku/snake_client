@@ -15,12 +15,6 @@ const connect = function () {
     conn.write("Name: KTT")
   });
   
-  // conn.on("connect", () => { //Move
-  //   // code that does something
-  //   setTimeout(() => {conn.write("Move: left")}, 1000);
-  //   setInterval(() => {conn.write("Move: up")}, 2000);
-    
-  // });
 
   conn.on("data", (data) => {
     // code that does something
@@ -30,4 +24,6 @@ const connect = function () {
   return conn;
 };
 
-module.exports = connect;
+module.exports = {
+  connect,
+}
