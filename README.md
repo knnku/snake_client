@@ -23,4 +23,4 @@ Before you can run this client, you will need to be running the server side whic
 
 
 
-*** - ctrl+c to exit the server and game ***
+***- ctrl+c to exit the server and game***
