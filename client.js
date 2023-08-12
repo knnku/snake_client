@@ -11,11 +11,10 @@ const connect = function () {
   // interpret incoming data as text
   conn.setEncoding("utf8");
   conn.on("connect", () => {
-    // code that does something
+    // Connection start and pass in name.
     console.log("Connection successfully established.");
-    conn.write("Name: KTT")
+    conn.write("Name: KTT");
   });
-  
 
   conn.on("data", (data) => {
     // code that does something
@@ -27,4 +26,4 @@ const connect = function () {
 
 module.exports = {
   connect,
-}
+};

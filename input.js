@@ -1,8 +1,9 @@
 let connection;
 
 const handleUserInput = function (key) {
-  if (key === "\u0003") { //Terminate client conn. using ctrl+c
-    process.exit(); 
+  if (key === "\u0003") {
+    //Terminate client conn. using ctrl+c
+    process.exit();
   }
 
   if (key === "w") {
@@ -18,7 +19,7 @@ const handleUserInput = function (key) {
     connection.write("Move: right");
   }
 
-  //Pre written messages to send with corresponding keys
+  //Pre-written messages to send with corresponding keys
   if (key === "p") {
     connection.write("Say: hello");
   }
